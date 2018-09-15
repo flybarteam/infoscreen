@@ -26,5 +26,4 @@ for TIME in root_Solundir.iter('row'):
 
  print('Dato og tid: ' + str(TIMESTAMP))
 
- print('hei')
-
+print('heisann')
