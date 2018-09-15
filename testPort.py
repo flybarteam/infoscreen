@@ -3,9 +3,9 @@ from selenium import webdriver
 import time
 import pyautogui
 
+
 outerCircle = open('C:\\Users\\Automasjon\\PycharmProjects\\infoscreen\\outerCircle.txt', 'r')
 outerCircle = int(outerCircle.read())
-
 innerCircle = open('C:\\Users\\Automasjon\\PycharmProjects\\infoscreen\\innerCircle.txt', 'r')
 innerCircle = int(innerCircle.read())
 
