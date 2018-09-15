@@ -28,4 +28,4 @@ for TIME in root_Solundir.iter('row'):
 
 print('LOL')
 
-Hei
+Hei kordan går det
