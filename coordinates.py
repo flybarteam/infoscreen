@@ -24,8 +24,4 @@ for TIME in root_Solundir.iter('row'):
 
 
 
- print('Dato og tid: ' + str(TIMESTAMP))
-
-print('LOL')
-
-Hei kordan går det
+ print('Dato og tid: ' + str(TIMESTAMP)
