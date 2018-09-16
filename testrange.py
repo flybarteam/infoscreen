@@ -8,7 +8,7 @@ InnerRadius = 0.0005
 SolundirLAT = 61.019066
 SolundirLON = 4.741218
 
-
+###################################################
 #Mjomna
 
 MjomnaOuterLAT1 = 60.918404 - OuterRadius
