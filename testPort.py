@@ -17,7 +17,7 @@ LON = testrange.SolundirLON
 
 
 
-if  testrange.isMjomnaOuterring and outerCircle == 0:
+if  testrange.isMjomnaOuterring() == 1 and outerCircle == 0:
     time.sleep(5)
     pyautogui.keyDown('ctrlleft')
     pyautogui.press('tab')
@@ -29,7 +29,7 @@ if  testrange.isMjomnaOuterring and outerCircle == 0:
     print('Solundir er innenfor ytre sirkel')
 
 
-if testrange.isMjomnaInnerring and innerCircle == 0:
+if testrange.isMjomnaInnerring() == 1 and innerCircle == 0:
     time.sleep(5)
     pyautogui.keyDown('ctrlleft')
     pyautogui.press('tab')
@@ -42,7 +42,7 @@ if testrange.isMjomnaInnerring and innerCircle == 0:
 
     print('Solundir er innenfor indre sirkel')
 
-if testrange.isMjomnaOuterring == 0 and innerCircle == 1:
+if testrange.isMjomnaOuterring() == 0 and innerCircle == 1:
     time.sleep(5)
     pyautogui.keyDown('ctrlleft')
     pyautogui.press('tab')
@@ -56,3 +56,5 @@ if testrange.isMjomnaOuterring == 0 and innerCircle == 1:
     outerCircle.close()
 
     print('Solundir er utenfor igjen.')
+
+print(testrange.isMjomnaOuterring())
