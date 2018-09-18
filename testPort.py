@@ -1,8 +1,8 @@
 #import coordinates_Solundir
-from selenium import webdriver
+#from selenium import webdriver
 import time
 import pyautogui
-
+import testrange
 
 outerCircle = open('C:\\Users\\Automasjon\\PycharmProjects\\infoscreen\\outerCircle.txt', 'r')
 outerCircle = int(outerCircle.read())
@@ -12,12 +12,12 @@ innerCircle = int(innerCircle.read())
 #LAT = float(coordinates_Solundir.getLat())
 #LON = float(coordinates_Solundir.getLon())
 
-LAT = 60.1
-LON = 6
+LAT = testrange.SolundirLAT
+LON = testrange.SolundirLON
 
 
 
-if LAT > 59.92 and LAT < 61.98 and LON > 4.80 and LON < 5.1 and outerCircle == 0:
+if  testrange.isMjomnaOuterring and outerCircle == 0:
     time.sleep(5)
     pyautogui.keyDown('ctrlleft')
     pyautogui.press('tab')
@@ -29,7 +29,7 @@ if LAT > 59.92 and LAT < 61.98 and LON > 4.80 and LON < 5.1 and outerCircle == 0
     print('Solundir er innenfor ytre sirkel')
 
 
-if LAT > 60.0 and LAT < 60.2 and LON > 4.9 and LON < 5.1 and innerCircle == 0:
+if testrange.isMjomnaInnerring and innerCircle == 0:
     time.sleep(5)
     pyautogui.keyDown('ctrlleft')
     pyautogui.press('tab')
@@ -42,7 +42,7 @@ if LAT > 60.0 and LAT < 60.2 and LON > 4.9 and LON < 5.1 and innerCircle == 0:
 
     print('Solundir er innenfor indre sirkel')
 
-if LAT < 59.92 or LAT > 61.98 or LON < 4.80 or LON > 5.1 and outerCircle == 1 and innerCircle == 1:
+if testrange.isMjomnaOuterring == 0 and innerCircle == 1:
     time.sleep(5)
     pyautogui.keyDown('ctrlleft')
     pyautogui.press('tab')

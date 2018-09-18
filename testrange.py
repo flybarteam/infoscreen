@@ -27,8 +27,13 @@ MjomnaOuterRingLAT = scipy.around(MjomnaOuterRingLAT, 6)
 MjomnaOuterRingLON = scipy.arange(MjomnaOuterLON1, MjomnaOuterLON2, 0.000001)
 MjomnaOuterRingLON = scipy.around(MjomnaOuterRingLON, 6)
 
-if SolundirLAT in MjomnaOuterRingLAT and SolundirLON in MjomnaOuterRingLON:
-    print('Solundir is in outer ring in Mjomna')
+def isMjomnaOuterring():
+    if SolundirLAT in MjomnaOuterRingLAT and SolundirLON in MjomnaOuterRingLON:
+        print('Solundir is in outer ring in Mjomna')
+        MjomnaOuterring = 1
+    else:
+        MjomnaOuterring = 0
+    return MjomnaOuterring
 
 MjomnaInnerRingLAT = scipy.arange(MjomnaInnerLAT1, MjomnaInnerLAT2, 0.000001)
 MjomnaInnerRingLAT = scipy.around(MjomnaInnerRingLAT, 6)
@@ -36,9 +41,13 @@ MjomnaInnerRingLAT = scipy.around(MjomnaInnerRingLAT, 6)
 MjomnaInnerRingLON = scipy.arange(MjomnaInnerLON1, MjomnaInnerLON2, 0.000001)
 MjomnaInnerRingLON = scipy.around(MjomnaInnerRingLON, 6)
 
-if SolundirLAT in MjomnaInnerRingLAT and SolundirLON in MjomnaInnerRingLON:
-    print('Solundir is in inner ring in Mjomna')
-
+def isMjomnaInnerring():
+        if SolundirLAT in MjomnaInnerRingLAT and SolundirLON in MjomnaInnerRingLON:
+            print('Solundir is in inner ring in Mjomna')
+            MjomnaInnerring = 1
+        else:
+            MjomnaInnerring = 0
+        return MjomnaInnerring
 #################################################################################
 #Eivindvik
 
@@ -58,8 +67,13 @@ EivindvikOuterRingLAT = scipy.around(EivindvikOuterRingLAT, 6)
 EivindvikOuterRingLON = scipy.arange(EivindvikOuterLON1, EivindvikOuterLON2, 0.000001)
 EivindvikOuterRingLON = scipy.around(EivindvikOuterRingLON, 6)
 
-if SolundirLAT in EivindvikOuterRingLAT and SolundirLON in EivindvikOuterRingLON:
-    print('Solundir is in outer ring in Eivindvik')
+def isEivindvikOuterring():
+    if SolundirLAT in EivindvikOuterRingLAT and SolundirLON in EivindvikOuterRingLON:
+        print('Solundir is in outer ring in Eivindvik')
+        EivindvikOuterring = 1
+    else:
+        EivindvikOuterring = 0
+    return EivindvikOuterring
 
 EivindvikInnerRingLAT = scipy.arange(EivindvikInnerLAT1, EivindvikInnerLAT2, 0.000001)
 EivindvikInnerRingLAT = scipy.around(EivindvikInnerRingLAT, 6)
@@ -67,9 +81,14 @@ EivindvikInnerRingLAT = scipy.around(EivindvikInnerRingLAT, 6)
 EivindvikInnerRingLON = scipy.arange(EivindvikInnerLON1, EivindvikInnerLON2, 0.000001)
 EivindvikInnerRingLON = scipy.around(EivindvikInnerRingLON, 6)
 
-if SolundirLAT in EivindvikInnerRingLAT and SolundirLON in EivindvikInnerRingLON:
-    print('Solundir is in inner ring in Eivindvik')
+def isEivindvikInnerring():
 
+    if SolundirLAT in EivindvikInnerRingLAT and SolundirLON in EivindvikInnerRingLON:
+        print('Solundir is in inner ring in Eivindvik')
+        EivindvikInnerring = 1
+    else:
+        EivindvikInnerring = 0
+    return EivindvikInnerring
 #####################################################################################
 #Austrheim
 
@@ -89,8 +108,14 @@ AustrheimOuterRingLAT = scipy.around(AustrheimOuterRingLAT, 6)
 AustrheimOuterRingLON = scipy.arange(AustrheimOuterLON1, AustrheimOuterLON2, 0.000001)
 AustrheimOuterRingLON = scipy.around(AustrheimOuterRingLON, 6)
 
-if SolundirLAT in AustrheimOuterRingLAT and SolundirLON in AustrheimOuterRingLON:
-    print('Solundir is in outer ring in Austrheim')
+def isAustrheimOuterring():
+
+    if SolundirLAT in AustrheimOuterRingLAT and SolundirLON in AustrheimOuterRingLON:
+        print('Solundir is in outer ring in Austrheim')
+        AustrheimOuterring = 1
+    else:
+        AustrheimOuterring = 0
+    return AustrheimOuterring
 
 AustrheimInnerRingLAT = scipy.arange(AustrheimInnerLAT1, AustrheimInnerLAT2, 0.000001)
 AustrheimInnerRingLAT = scipy.around(AustrheimInnerRingLAT, 6)
@@ -98,8 +123,14 @@ AustrheimInnerRingLAT = scipy.around(AustrheimInnerRingLAT, 6)
 AustrheimInnerRingLON = scipy.arange(AustrheimInnerLON1, AustrheimInnerLON2, 0.000001)
 AustrheimInnerRingLON = scipy.around(AustrheimInnerRingLON, 6)
 
-if SolundirLAT in AustrheimInnerRingLAT and SolundirLON in AustrheimInnerRingLON:
-    print('Solundir is in inner ring in Austrheim')
+def isAustrheimInnerring():
+
+    if SolundirLAT in AustrheimInnerRingLAT and SolundirLON in AustrheimInnerRingLON:
+        print('Solundir is in inner ring in Austrheim')
+        AustrheimInnerring = 1
+    else:
+        AustrheimInnerring = 0
+    return AustrheimInnerring
 
 ###########################################################################
 #Nara
@@ -120,8 +151,13 @@ NaraOuterRingLAT = scipy.around(NaraOuterRingLAT, 6)
 NaraOuterRingLON = scipy.arange(NaraOuterLON1, NaraOuterLON2, 0.000001)
 NaraOuterRingLON = scipy.around(NaraOuterRingLON, 6)
 
-if SolundirLAT in NaraOuterRingLAT and SolundirLON in NaraOuterRingLON:
-    print('Solundir is in outer ring in Nara')
+def isNaraOuterring():
+    if SolundirLAT in NaraOuterRingLAT and SolundirLON in NaraOuterRingLON:
+        print('Solundir is in outer ring in Nara')
+        NaraOuterring = 1
+    else:
+        NaraOuterring = 0
+    return NaraOuterring
 
 NaraInnerRingLAT = scipy.arange(NaraInnerLAT1, NaraInnerLAT2, 0.000001)
 NaraInnerRingLAT = scipy.around(NaraInnerRingLAT, 6)
@@ -129,5 +165,10 @@ NaraInnerRingLAT = scipy.around(NaraInnerRingLAT, 6)
 NaraInnerRingLON = scipy.arange(NaraInnerLON1, NaraInnerLON2, 0.000001)
 NaraInnerRingLON = scipy.around(NaraInnerRingLON, 6)
 
-if SolundirLAT in NaraInnerRingLAT and SolundirLON in NaraInnerRingLON:
-    print('Solundir is in inner ring in Nara')
+def isNaraInnerring():
+    if SolundirLAT in NaraInnerRingLAT and SolundirLON in NaraInnerRingLON:
+        print('Solundir is in inner ring in Nara')
+        NaraInnerring = 1
+    else:
+        NaraInnerring = 0
+    return NaraInnerring
