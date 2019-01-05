@@ -23,6 +23,3 @@ except KeyboardInterrupt:
 except StopIteration:
     session = None
     print("GPSD has terminated")
-
-    lol
-
