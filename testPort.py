@@ -3,12 +3,13 @@
 import time
 import pyautogui
 import testrange
+import getcoordinates
 
 
 # Please specify where the .txt files for inner and outer circle should be
 
-innerCircleFilePath = "F:\\Infoscreen\\innerCircle.txt"
-outerCircleFilePath = "F:\\Infoscreen\\outerCircle.txt"
+innerCircleFilePath = "/home/pi/infoscreen/innerCircle.txt"
+outerCircleFilePath = "/home/pi/infoscreen/outerCircle.txt"
 try:
     outerCircle = open(outerCircleFilePath, 'r')    #Tries to open .txt file if it exists
 except FileNotFoundError:
@@ -30,8 +31,11 @@ innerCircle = int(innerCircle.read())
 #LAT = float(coordinates_Solundir.getLat())
 #LON = float(coordinates_Solundir.getLon())
 
-LAT = testrange.SolundirLAT
-LON = testrange.SolundirLON
+#LAT = testrange.SolundirLAT
+#LON = testrange.SolundirLON
+
+LON = getcoordinates.longitude
+LAT = getcoordinates.latitude
 
 
 
