@@ -14,12 +14,12 @@ while x < 1:
             if hasattr(report, 'lat'):
                 latitude = report.lat
                 print('Latitude ' + str(latitude))
-		x = 1
+                x = 1
         if report['class'] == 'TPV':
             if hasattr(report, 'lon'):
                 longitude = report.lon
                 print('Longitude ' + str(longitude))
-		x = 1
+                x = 1
     except KeyError:
         pass
     except KeyboardInterrupt:
