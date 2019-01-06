@@ -5,8 +5,8 @@ OuterRadius = 0.0125
 InnerRadius = 0.0005
 
 #Simulated coordinates
-SolundirLAT = 60.918404
-SolundirLON = 4.901205
+#SolundirLAT = 60.918404
+#SolundirLON = 4.901205
 
 ###################################################
 #Mjomna
