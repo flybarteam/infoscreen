@@ -1,0 +1,13 @@
+Hvordan sette opp raspberry pi til å ta imot GPS modul.
+
+1. sudo raspi-config     Wifi -- enable SSH --  enable serial -> No-->Yes
+2. Koble til via SSH, f.eks putty
+3. sudo apt-get install gpsd gpsd-clients
+4. sudo systemctl stop gpsd.socket
+5. sudo systemctl disable gpsd.socket
+6. sudo raspi-config interface-serial Select No on enabling the login shell, Select Yes on enabling serial port hardware
+7. sudo reboot
+8. sudo killall gpsd
+9. sudo gpsd /dev/serial0 -F /var/run/gpsd.sock
+10. test med cgps -s
+11. sudo nano /etc/rc.local       skriv sudo gpsd /dev/serial0 -F /var/run/gpsd.sock   inn her. Over den siste linjen.
