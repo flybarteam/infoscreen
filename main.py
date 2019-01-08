@@ -1,15 +1,15 @@
 #import coordinates_Solundir
 #from selenium import webdriver
 import time
-import pyautogui
-import testrange
+#import pyautogui
+import rangePorts
 import getcoordinates
-
+import popup
 
 # Please specify where the .txt files for inner and outer circle should be
 
-innerCircleFilePath = "/home/pi/infoscreen/innerCircle.txt"
-outerCircleFilePath = "/home/pi/infoscreen/outerCircle.txt"
+innerCircleFilePath = "/home/pi/Infoscreen/innerCircle.txt"
+outerCircleFilePath = "/home/pi/Infoscreen/outerCircle.txt"
 try:
     outerCircle = open(outerCircleFilePath, 'r')    #Tries to open .txt file if it exists
 except FileNotFoundError:
@@ -31,15 +31,15 @@ innerCircle = int(innerCircle.read())
 #LAT = float(coordinates_Solundir.getLat())
 #LON = float(coordinates_Solundir.getLon())
 
-#LAT = testrange.SolundirLAT
-#LON = testrange.SolundirLON
+#LAT = rangePorts.SolundirLAT
+#LON = rangePorts.SolundirLON
 
 LON = getcoordinates.longitude
 LAT = getcoordinates.latitude
 
 
-
-if  testrange.isMjomnaOuterring() == 1 and outerCircle == 0:
+###############################################################
+if  rangePorts.isMjomnaOuterring() == 1 and outerCircle == 0:
     time.sleep(5)
     #pyautogui.keyDown('ctrlleft')
     #pyautogui.press('tab')
@@ -47,11 +47,11 @@ if  testrange.isMjomnaOuterring() == 1 and outerCircle == 0:
     outerCircle = open(outerCircleFilePath, 'w')
     outerCircle.write('1')
     outerCircle.close()
+    print('Solundir er innenfor ytre ring')
 
-    print('Solundir er innenfor ytre sirkel')
 
 
-if testrange.isMjomnaInnerring() == 1 and innerCircle == 0:
+if rangePorts.isMjomnaInnerring() == 1 and innerCircle == 0:
     time.sleep(5)
     #pyautogui.keyDown('ctrlleft')
     #pyautogui.press('tab')
@@ -59,12 +59,11 @@ if testrange.isMjomnaInnerring() == 1 and innerCircle == 0:
     innerCircle = open(innerCircleFilePath, 'w')
     innerCircle.write('1')
     innerCircle.close()
+    print('Solundir er innenfor indre ring')
 
 
 
-    print('Solundir er innenfor indre sirkel')
-
-if testrange.isMjomnaOuterring() == 0 and innerCircle == 1:
+if rangePorts.isMjomnaOuterring() == 0 and innerCircle == 1:
     time.sleep(5)
     #pyautogui.keyDown('ctrlleft')
    #pyautogui.press('tab')
@@ -78,5 +77,43 @@ if testrange.isMjomnaOuterring() == 0 and innerCircle == 1:
     outerCircle.close()
 
     print('Solundir er utenfor igjen.')
+##########################################################
+if  rangePorts.isBergenOuterring() == 1 and outerCircle == 0:
+    time.sleep(5)
+    #pyautogui.keyDown('ctrlleft')
+    #pyautogui.press('tab')
 
-print(testrange.isMjomnaOuterring())
+    outerCircle = open(outerCircleFilePath, 'w')
+    outerCircle.write('1')
+    outerCircle.close()
+    print('Solundir er innenfor ytre ring')
+
+
+if rangePorts.isBergenInnerring() == 1 and innerCircle == 0:
+    time.sleep(5)
+    #pyautogui.keyDown('ctrlleft')
+    #pyautogui.press('tab')
+
+    innerCircle = open(innerCircleFilePath, 'w')
+    innerCircle.write('1')
+    innerCircle.close()
+    print('Solundir er innenfor indre ring')
+    popup.Bergen()
+
+
+
+
+if rangePorts.isBergenOuterring() == 0 and innerCircle == 1:
+    time.sleep(5)
+    #pyautogui.keyDown('ctrlleft')
+   #pyautogui.press('tab')
+
+    innerCircle = open(innerCircleFilePath, 'w')
+    innerCircle.write('0')
+    innerCircle.close()
+
+    outerCircle = open(outerCircleFilePath, 'w')
+    outerCircle.write('0')
+    outerCircle.close()
+
+    print('Solundir er utenfor igjen.')

@@ -2,12 +2,14 @@ import scipy
 import getcoordinates
 #Radius
 OuterRadius = 0.0125
-InnerRadius = 0.0005
+InnerRadius = 0.0015
 
 #Simulated coordinates
-SolundirLAT = getcoordinates.latitude
-SolundirLON = getcoordinates.longitude
+SolundirLAT = round(getcoordinates.latitude, 6)
+SolundirLON = round(getcoordinates.longitude, 6)
 
+print(SolundirLAT)
+print(SolundirLON)
 ###################################################
 #Mjomna
 
@@ -172,3 +174,43 @@ def isNaraInnerring():
     else:
         NaraInnerring = 0
     return NaraInnerring
+
+########################################################################
+#Bergen
+#Bergen
+
+BergenOuterLAT1 = 60.369379 - OuterRadius
+BergenOuterLON1 = 5.352979 - OuterRadius
+BergenOuterLAT2 = 60.369379 + OuterRadius
+BergenOuterLON2 = 5.352979 + OuterRadius
+
+BergenInnerLAT1 = 60.369379 - InnerRadius
+BergenInnerLON1 = 5.352979 - InnerRadius
+BergenInnerLAT2 = 60.369379 + OuterRadius
+BergenInnerLON2 = 5.352979 + OuterRadius
+
+BergenOuterRingLAT = scipy.arange(BergenOuterLAT1, BergenOuterLAT2, 0.000001)
+BergenOuterRingLAT = scipy.around(BergenOuterRingLAT, 6)
+
+BergenOuterRingLON = scipy.arange(BergenOuterLON1, BergenOuterLON2, 0.000001)
+BergenOuterRingLON = scipy.around(BergenOuterRingLON, 6)
+
+def isBergenOuterring():
+    if SolundirLAT in BergenOuterRingLAT and SolundirLON in BergenOuterRingLON:
+        BergenOuterring = 1
+    else:
+        BergenOuterring = 0
+    return BergenOuterring
+
+BergenInnerRingLAT = scipy.arange(BergenInnerLAT1, BergenInnerLAT2, 0.000001)
+BergenInnerRingLAT = scipy.around(BergenInnerRingLAT, 6)
+
+BergenInnerRingLON = scipy.arange(BergenInnerLON1, BergenInnerLON2, 0.000001)
+BergenInnerRingLON = scipy.around(BergenInnerRingLON, 6)
+
+def isBergenInnerring():
+        if SolundirLAT in BergenInnerRingLAT and SolundirLON in BergenInnerRingLON:
+            BergenInnerring = 1
+        else:
+            BergenInnerring = 0
+        return BergenInnerring
