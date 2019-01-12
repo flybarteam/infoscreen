@@ -1,3 +1,4 @@
+#TODO Ordne firkantene på havnene
 import scipy
 import getcoordinates
 #Radius
