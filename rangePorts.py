@@ -20,8 +20,8 @@ MjomnaOuterLON2 = 4.901205 + OuterRadius
 
 MjomnaInnerLAT1 = 60.918404 - InnerRadius
 MjomnaInnerLON1 = 4.901205 - InnerRadius
-MjomnaInnerLAT2 = 60.918404 + OuterRadius
-MjomnaInnerLON2 = 4.901205 + OuterRadius
+MjomnaInnerLAT2 = 60.918404 + InnerRadius
+MjomnaInnerLON2 = 4.901205 + InnerRadius
 
 MjomnaOuterRingLAT = scipy.arange(MjomnaOuterLAT1, MjomnaOuterLAT2, 0.000001)
 MjomnaOuterRingLAT = scipy.around(MjomnaOuterRingLAT, 6)
@@ -60,8 +60,8 @@ EivindvikOuterLON2 = 5.077910 + OuterRadius
 
 EivindvikInnerLAT1 = 60.979406 - InnerRadius
 EivindvikInnerLON1 = 5.077910 - InnerRadius
-EivindvikInnerLAT2 = 60.979406 + OuterRadius
-EivindvikInnerLON2 = 5.077910 + OuterRadius
+EivindvikInnerLAT2 = 60.979406 + InnerRadius
+EivindvikInnerLON2 = 5.077910 + InnerRadius
 
 EivindvikOuterRingLAT = scipy.arange(EivindvikOuterLAT1, EivindvikOuterLAT2, 0.000001)
 EivindvikOuterRingLAT = scipy.around(EivindvikOuterRingLAT, 6)
@@ -101,8 +101,8 @@ AustrheimOuterLON2 = 4.939859 + OuterRadius
 
 AustrheimInnerLAT1 = 60.789151 - InnerRadius
 AustrheimInnerLON1 = 4.939859 - InnerRadius
-AustrheimInnerLAT2 = 60.789151 + OuterRadius
-AustrheimInnerLON2 = 4.939859 + OuterRadius
+AustrheimInnerLAT2 = 60.789151 + InnerRadius
+AustrheimInnerLON2 = 4.939859 + InnerRadius
 
 AustrheimOuterRingLAT = scipy.arange(AustrheimOuterLAT1, AustrheimOuterLAT2, 0.000001)
 AustrheimOuterRingLAT = scipy.around(AustrheimOuterRingLAT, 6)
@@ -144,8 +144,8 @@ NaraOuterLON2 = 4.741218 + OuterRadius
 
 NaraInnerLAT1 = 61.019066 - InnerRadius
 NaraInnerLON1 = 4.741218 - InnerRadius
-NaraInnerLAT2 = 61.019066 + OuterRadius
-NaraInnerLON2 = 4.741218 + OuterRadius
+NaraInnerLAT2 = 61.019066 + InnerRadius
+NaraInnerLON2 = 4.741218 + InnerRadius
 
 NaraOuterRingLAT = scipy.arange(NaraOuterLAT1, NaraOuterLAT2, 0.000001)
 NaraOuterRingLAT = scipy.around(NaraOuterRingLAT, 6)
@@ -186,8 +186,8 @@ BergenOuterLON2 = 5.352979 + OuterRadius
 
 BergenInnerLAT1 = 60.369379 - InnerRadius
 BergenInnerLON1 = 5.352979 - InnerRadius
-BergenInnerLAT2 = 60.369379 + OuterRadius
-BergenInnerLON2 = 5.352979 + OuterRadius
+BergenInnerLAT2 = 60.369379 + InnerRadius
+BergenInnerLON2 = 5.352979 + InnerRadius
 
 BergenOuterRingLAT = scipy.arange(BergenOuterLAT1, BergenOuterLAT2, 0.000001)
 BergenOuterRingLAT = scipy.around(BergenOuterRingLAT, 6)

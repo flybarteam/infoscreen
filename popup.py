@@ -9,3 +9,5 @@ def Bergen():
     w.pack()
     master.after(10000, master.destroy)              #The time, the label stands, before it is destroyed.
     master.mainloop()
+
+Bergen()
